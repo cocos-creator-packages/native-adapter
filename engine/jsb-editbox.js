@@ -128,6 +128,7 @@
             }
             jsb.inputBox.show({
                 defaultValue: delegate._string,
+                placeholder: delegate.placeholder,
                 maxLength: maxLength,
                 multiple: multiline,
                 confirmHold: false,
