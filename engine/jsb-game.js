@@ -41,6 +41,9 @@ jsb.onPause = function () {
 };
 
 jsb.onResume = function () {
+    if (cc.game.renderType === cc.game.RENDER_TYPE_WEBGL) {
+        cc.game._renderContext.finish();
+    }    
     cc.game.emit(cc.game.EVENT_SHOW);
 };
 

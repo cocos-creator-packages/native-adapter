@@ -657,12 +657,8 @@ function enableVertexAttribArrayOpt(index) {
 
 function finishOpt() {
     // console.log('GLOpt: finish');
-    if (next_index + 1 >= total_size) {
-        flushCommands();
-    }
-    buffer_data[next_index] = GL_COMMAND_FINISH;
-    next_index += 1;
-    ++commandCount;
+    flushCommands();
+    return _gl.finish();
 }
 
 function flushOpt() {
